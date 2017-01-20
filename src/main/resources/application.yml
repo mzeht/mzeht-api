@@ -1,0 +1,127 @@
+spring:
+  profiles: development
+druidpool:
+  monitor:
+    user: root
+    pass: root
+    allow:
+    deny:
+    mapping: "/druid/*"
+    exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+  lock:
+    sync-prefix: lock_sync_gpbOlR9f_
+    timeout: 5
+  name:
+    - base
+  driver-class-name: com.mysql.jdbc.Driver
+  dbtype: mariadb
+  url:
+    - jdbc:mysql://139.224.8.150:3306/days?useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+  username:
+    - root
+  password:
+    - Uzeon6gWV3WLFJGGwozThlC64mlpMgpMKS3VEJyJQD3UtSOUbRck3PzKZ5phCQIY3iGZGj6QXP/dxSBjE36QNQ==
+  merge-sql: true
+  log-slow-sql: true
+  global-datasource-stat: false
+  slow-sql-millis:
+    - 3000
+  filters: stat,wall,log4j,config
+  max-active:
+    - 20
+  initial-size:
+    - 1
+  max-wait:
+    - 60000
+  min-idle:
+    - 1
+  time-between-eviction-runs-millis:
+    - 60000
+  min-evictable-idle-time-millis:
+    - 300000
+  validation-query: select 'UPGCREDIT'
+  test-while-idle: true
+  test-on-borrow: false
+  test-on-return: false
+  pool-prepared-statements: true
+  max-open-prepared-statements:
+    - 20
+  connection-properties:
+    - config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIdIPDFv8gLZfyw/TIdsapAeMrEZAk4//S7rqGJBPknP6Z7+P4sEIQjBUqX4CyYS7DVLLYLX0L3vrRSAMgm8zScCAwEAAQ==
+server:
+  port: 10101
+  display-name: upgcredit-channelapi-dev-01
+  error:
+    whitelabel:
+      enabled: false
+mybatis:
+  type-aliases-package: cn.upg.credit.circus.po
+  check-config-location: true
+api:
+  common: "http://10.10.168.79:10100/"
+  corp: "http://10.10.168.28:10102"
+logback:
+  level: "DEBUG"
+---
+spring:
+  profiles: production
+druidpool:
+   monitor:
+    user: root
+    pass: upg-credit-monitor
+    allow:
+    deny:
+    mapping: "/druid/*"
+    exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+   lock:
+    sync-prefix: lock_sync_gpbOlR9f_
+    timeout: 5
+   name:
+    - base
+   driver-class-name: com.mysql.jdbc.Driver
+   dbtype: mariadb
+   url:
+    - jdbc:mysql://139.224.8.150:3306/days?useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+   username:
+    - mysql
+   password:
+    - Uzeon6gWV3WLFJGGwozThlC64mlpMgpMKS3VEJyJQD3UtSOUbRck3PzKZ5phCQIY3iGZGj6QXP/dxSBjE36QNQ==
+   merge-sql: true
+   log-slow-sql: true
+   global-datasource-stat: false
+   slow-sql-millis:
+    - 3000
+   filters: stat,wall,log4j,config
+   max-active:
+    - 20
+   initial-size:
+    - 1
+   max-wait:
+    - 60000
+   min-idle:
+    - 1
+   time-between-eviction-runs-millis:
+    - 60000
+   min-evictable-idle-time-millis:
+    - 300000
+   validation-query: select 'UPGCREDIT'
+   test-while-idle: true
+   test-on-borrow: false
+   test-on-return: false
+   pool-prepared-statements: true
+   max-open-prepared-statements:
+    - 20
+   connection-properties:
+    - config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIdIPDFv8gLZfyw/TIdsapAeMrEZAk4//S7rqGJBPknP6Z7+P4sEIQjBUqX4CyYS7DVLLYLX0L3vrRSAMgm8zScCAwEAAQ==
+server:
+  port: 10101
+  display-name: upgcredit-channelapi-pro-01
+  error:
+      whitelabel:
+        enabled: false
+mybatis:
+  type-aliases-package: cn.upg.credit.circus.po
+  check-config-location: true
+api:
+  common: "http://10.10.168.79:10100/"
+  corp: "http://10.10.168.28:10102"
