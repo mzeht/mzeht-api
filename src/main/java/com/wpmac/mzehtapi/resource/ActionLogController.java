@@ -1,13 +1,16 @@
 package com.wpmac.mzehtapi.resource;
 
 
+import com.wpmac.mzehtapi.dto.PageDTO;
 import com.wpmac.mzehtapi.po.ResponseList;
 import com.wpmac.mzehtapi.po.ResponseObj;
 import com.wpmac.mzehtapi.po.UserActionLog;
 import com.wpmac.mzehtapi.service.ActionLogService;
 import com.wpmac.mzehtapi.utils2.GsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,18 +28,18 @@ public class ActionLogController {
     /**
      * 分页查找行为日志，其实druid里面已经包含了行为日志
      *
-     * @param pageNum  页码
-     * @param pageSize 每一页的条数
      * @return
      */
-    @RequestMapping(value = "/findLogList"
-            , produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "/findLogList",method = RequestMethod.POST
+            , produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ResponseBody
-    public Object findLog(int pageNum, int pageSize) {
-        if (pageNum <= 0) {
+    public Object findLog(PageDTO pageDTO) {
+        int pageNum=1;
+        int pageSize = 10;
+        if (pageDTO.getPageNum() <= 0) {
             pageNum = 1;
         }
-        if (pageSize == 0) {
+        if (pageDTO.getPageSize() == 0) {
             pageSize = 10;
         }
 

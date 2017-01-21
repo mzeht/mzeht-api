@@ -12,11 +12,11 @@ druidpool:
     sync-prefix: lock_sync_gpbOlR9f_
     timeout: 5
   name:
-    - base
+    - days
   driver-class-name: com.mysql.jdbc.Driver
   dbtype: mariadb
   url:
-    - jdbc:mysql://139.224.8.150:3306/days?useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+    - jdbc:mysql://139.224.8.150:3306/days?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
   username:
     - root
   password:
@@ -77,11 +77,11 @@ druidpool:
     sync-prefix: lock_sync_gpbOlR9f_
     timeout: 5
    name:
-    - base
+    - days
    driver-class-name: com.mysql.jdbc.Driver
    dbtype: mariadb
    url:
-    - jdbc:mysql://139.224.8.150:3306/days?useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+    - jdbc:mysql://139.224.8.150:3306/days?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
    username:
     - mysql
    password:
