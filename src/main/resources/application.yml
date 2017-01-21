@@ -20,7 +20,7 @@ druidpool:
   username:
     - root
   password:
-    - Uzeon6gWV3WLFJGGwozThlC64mlpMgpMKS3VEJyJQD3UtSOUbRck3PzKZ5phCQIY3iGZGj6QXP/dxSBjE36QNQ==
+    - Mpc7wElaDT5qBoUNxb9l+vSORWWTbKn4kPYv9Hqbyee4+MSVEJFykF6uDTd9aKVM4njsiyB5/hmdCHRRenVvNQ==
   merge-sql: true
   log-slow-sql: true
   global-datasource-stat: false
@@ -47,7 +47,7 @@ druidpool:
   max-open-prepared-statements:
     - 20
   connection-properties:
-    - config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIdIPDFv8gLZfyw/TIdsapAeMrEZAk4//S7rqGJBPknP6Z7+P4sEIQjBUqX4CyYS7DVLLYLX0L3vrRSAMgm8zScCAwEAAQ==
+    - config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAINGU2tylzoqPGiG+UvaeuiVutShTv/XzbMxhw9bSeGs/M2VMNZ89Xd3VpIyGpeUjP7flF6lrXrAjmO5y2sQUcECAwEAAQ==
 server:
   port: 10101
   display-name: upgcredit-channelapi-dev-01
@@ -85,7 +85,7 @@ druidpool:
    username:
     - mysql
    password:
-    - Uzeon6gWV3WLFJGGwozThlC64mlpMgpMKS3VEJyJQD3UtSOUbRck3PzKZ5phCQIY3iGZGj6QXP/dxSBjE36QNQ==
+    - Mpc7wElaDT5qBoUNxb9l+vSORWWTbKn4kPYv9Hqbyee4+MSVEJFykF6uDTd9aKVM4njsiyB5/hmdCHRRenVvNQ==
    merge-sql: true
    log-slow-sql: true
    global-datasource-stat: false
@@ -112,7 +112,7 @@ druidpool:
    max-open-prepared-statements:
     - 20
    connection-properties:
-    - config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIdIPDFv8gLZfyw/TIdsapAeMrEZAk4//S7rqGJBPknP6Z7+P4sEIQjBUqX4CyYS7DVLLYLX0L3vrRSAMgm8zScCAwEAAQ==
+    - config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAINGU2tylzoqPGiG+UvaeuiVutShTv/XzbMxhw9bSeGs/M2VMNZ89Xd3VpIyGpeUjP7flF6lrXrAjmO5y2sQUcECAwEAAQ==
 server:
   port: 10101
   display-name: upgcredit-channelapi-pro-01
