@@ -1,7 +1,9 @@
 package com.wpmac.mzehtapi.mapper.days;
 
 import com.wpmac.mzehtapi.po.UserActionLog;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 import java.util.List;
@@ -9,6 +11,8 @@ import java.util.List;
 /**
  * Created by wangpeng on 2017/1/9.
  */
+@Mapper
+@Component
 public interface ActionLogMapper {
 
     int add(UserActionLog userActionLog);

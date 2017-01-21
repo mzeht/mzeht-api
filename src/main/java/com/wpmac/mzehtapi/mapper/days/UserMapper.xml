@@ -2,8 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wpmac.mzehtapi.mapper.days.UserMapper">
-    <!--查找-->
-    <select id="findOneById" resultType="User" parameterType="String">
+    <resultMap id="UserResultMap" type="com.wpmac.mzehtapi.po.User">
+        <id column="login_id" property="loginId"/>
+        <result column="pwd" property="pwd"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+        <result column="sex" property="sex"/>
+        <result column="duty" property="duty"/>
+        <result column="cell_number" property="cellNumber"/>
+        <result column="photo_url" property="photoUrl"/>
+
+    </resultMap>
+    <select id="findOneById" resultMap="UserResultMap" parameterType="String">
     SELECT
     *
     FROM
@@ -13,7 +23,7 @@
 </select>
 
     <!--增加语句-->
-    <insert id="add" parameterType="User">
+    <insert id="add" parameterType="com.wpmac.mzehtapi.po.User">
     INSERT INTO
     `user`
     (`login_id`,`name`,`age`,`sex`,`duty`,`cell_number`,`photo_url`,`pwd`,`used`)
@@ -22,7 +32,7 @@
 </insert>
 
     <!-- 删除 -->
-    <update id="del" parameterType="User">
+    <update id="del" parameterType="com.wpmac.mzehtapi.po.User">
         UPDATE
         `user`
         SET
@@ -32,7 +42,7 @@
     </update>
 
     <!-- 更新用户信息 -->
-    <update id="update" parameterType="User">
+    <update id="update" parameterType="com.wpmac.mzehtapi.po.User">
         UPDATE
         `user`
         SET

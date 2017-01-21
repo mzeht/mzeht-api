@@ -55,7 +55,7 @@ server:
     whitelabel:
       enabled: false
 mybatis:
-  type-aliases-package: cn.upg.credit.circus.po
+  type-aliases-package: com.wpmac.mzehtapi.po
   check-config-location: true
 api:
   common: "http://10.10.168.79:10100/"
@@ -120,7 +120,7 @@ server:
       whitelabel:
         enabled: false
 mybatis:
-  type-aliases-package: cn.upg.credit.circus.po
+  type-aliases-package: com.wpmac.mzehtapi.po
   check-config-location: true
 api:
   common: "http://10.10.168.79:10100/"

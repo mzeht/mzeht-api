@@ -22,9 +22,9 @@ import java.util.List;
 
 @Configuration
 @MapperScan(basePackages = "com.wpmac.mzeht.mapper.days", sqlSessionFactoryRef = "baseSqlSessionFactory")
-public class BaseDBConfig {
+public class DaysDBConfig {
 
-    private final Logger log = Logger.getLogger(BaseDBConfig.class);
+    private final Logger log = Logger.getLogger(DaysDBConfig.class);
 
     @Autowired
     private Environment env;
